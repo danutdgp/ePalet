@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ePalet — Paleți EURO SH • Reparații & Transport</title>
+  <meta name="description" content="Comercializare paleți EURO SH din stoc, reparații autorizate și transport rapid. Promptitudine, prețuri avantajoase, +10 ani experiență." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo-epalet.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-home">
+  <!-- ===== HEADER fix (logo stânga, pagini dreapta) ===== -->
+  <header class="site-header">
+    <div class="container hdr">
+      <a class="logo" href="index.html" aria-label="ePalet - acasă">
+        <img src="images/logo-epalet.jpg" alt="ePalet" />
+        
+      </a>
+
+      <nav class="primary-nav" aria-label="Navigație principală">
+        <input type="checkbox" id="nav-toggle" />
+        <label class="hamburger" for="nav-toggle" aria-label="Deschide meniul">
+          <span></span><span></span><span></span>
+        </label>
+        <ul>
+          <li><a class="active" href="index.html">Acasă</a></li>
+          <li><a href="despre-noi.html">Despre noi</a></li>
+          <li><a href="servicii.html">Servicii</a></li>
+          <li><a class="btn small" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO / CARUSEL ===== -->
+  <section class="hero">
+    <div class="slider" id="slider">
+      <div class="slide active" style="background-image:url('images/hero-1.jpg')">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h1>CAUTAȚI PALEȚI EURO SH?</h1>
+          <a href="contact.html" class="btn">CERE OFERTĂ</a>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('images/hero-2.jpg')">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h1>COMERCIALIZĂM PALEȚI EURO&nbsp;SH</h1>
+          <a href="contact.html" class="btn">CERE OFERTĂ</a>
+        </div>
+      </div>
+
+      <div class="slide" style="background-image:url('images/hero-3.jpg')">
+        <div class="overlay"></div>
+        <div class="caption">
+          <h1>REPARAȚII & TRANSPORT</h1>
+          <a href="contact.html" class="btn">CERE OFERTĂ</a>
+        </div>
+      </div>
+
+      <!-- doar 2 săgeți (clasă nouă .slider-btn, nu .nav) -->
+      <button class="slider-btn prev" id="prev" aria-label="Slide anterior">‹</button>
+      <button class="slider-btn next" id="next" aria-label="Slide următor">›</button>
+    </div>
+
+    <div class="hero-belt container">
+      <div class="belt-item"><span class="dot"></span> Livrare rapidă național</div>
+      <div class="belt-item"><span class="dot"></span> Trasabilitate & conformitate</div>
+      <div class="belt-item"><span class="dot"></span> Ofertă în 24h</div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICII ===== -->
+  <section class="section services" id="servicii">
+    <div class="container">
+      <h2 class="section-title pop-in">Serviciile noastre</h2>
+
+      <div class="service-grid">
+        <article class="service-card rise">
+          <figure class="thumb"><img src="images/reparatii.jpg" alt="Reparații paleți Euro"></figure>
+          <div class="body">
+            <h3>Reparații</h3>
+            <p>Reparații rapide și conforme UIC, cu piese verificate și flux documentat.</p>
+          </div>
+        </article>
+
+        <article class="service-card rise" style="--d:.06s">
+          <figure class="thumb"><img src="images/transport.jpg" alt="Transport paleți"></figure>
+          <div class="body">
+            <h3>Transport</h3>
+            <p>Ridicare & livrare la timp, flotă proprie și parteneri validați.</p>
+          </div>
+        </article>
+
+        <article class="service-card rise" style="--d:.12s">
+          <figure class="thumb"><img src="images/comercializare.jpg" alt="Comercializare paleți Euro SH"></figure>
+          <div class="body">
+            <h3>Comercializare & Vânzare</h3>
+            <p>Paleți Euro SH din stoc, clasați calitativ, pregătiți de utilizare.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ÎNCREDERE ===== -->
+  <section class="section trust">
+    <div class="container trust-wrap">
+      <div class="trust-copy slide-left">
+        <h2>Suntem de încredere</h2>
+        <p>5 ani în industrie. Centru autorizat de colectare și reciclare deșeuri de ambalaje (paleți Euro). Deținem autorizație reparație Eur UIC, certificări ISO 9001 & 14001 și PEFC pentru lanțul de custodi.</p>
+        <p>Comercializare din stoc, reparații autorizate, transport eficient — un circuit complet, controlat și trasabil.</p>
+        <a class="btn" href="despre-noi.html">Află mai multe</a>
+      </div>
+
+      <div class="trust-stats slide-right">
+        <div class="stat"><strong>5</strong><span>ani experiență</span></div>
+        <div class="stat"><strong>100K+</strong><span>paleți procesați</span></div>
+        <div class="stat"><strong>24–48h</strong><span>livrare uzuală</span></div>
+        <div class="stat"><strong>ISO</strong><span>9001 & 14001</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECOMANDĂRI ===== -->
+  <section class="section recommend">
+    <div class="container">
+      <h2 class="section-title pop-in">Ce ne recomandă</h2>
+      <div class="reco-grid">
+        <div class="reco card-tilt"><h3>Promptitudine</h3><p>Răspuns rapid, execuție fără întârzieri.</p></div>
+        <div class="reco card-tilt"><h3>Prețuri avantajoase</h3><p>Optimizăm costurile fără compromis de calitate.</p></div>
+        <div class="reco card-tilt"><h3>5 ani experiență</h3><p>Procese clare, auditate și verificate în timp.</p></div>
+        <div class="reco card-tilt"><h3>Servicii ireproșabile</h3><p>Standard ridicat, trasabilitate și conformitate.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <img src="images/logo-epalet.jpg" alt="ePalet logo">
+        <p><strong>ePalet</strong></p>
+        <small>Program: Luni – Vineri / 08 – 17</small>
+        <small>Locație: Pitești, str. Dobrogeanu Gherea nr.5</small>
+      </div>
+
+      <div class="foot-dept">
+        <h4>Departamente</h4>
+        <ul>
+          <li><strong>Vânzări:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          <li><strong>Mediu:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          <li><strong>Transport:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:office@epalet.ro">office@epalet.ro</a></p>
+        <p>Punct de lucru: Dobrogeanu Gherea Nr.5, Pitești/Argeș</p>
+        <p><a class="btn small" href="contact.html">Formular contact</a></p>
+      </div>
+    </div>
+    <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
+  </footer>
+
+  <!-- ===== JS: an + carusel ===== -->
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const slides = document.querySelectorAll('.slide');
+    const prevBtn = document.getElementById('prev');
+    const nextBtn = document.getElementById('next');
+    let i = 0;
+    let timer = setInterval(next, 2000); // autoplay 2s
+
+    function show(idx){ slides.forEach((s, k)=> s.classList.toggle('active', k === idx)); }
+    function next(){ i = (i + 1) % slides.length; show(i); }
+    function prev(){ i = (i - 1 + slides.length) % slides.length; show(i); }
+    function reset(){ clearInterval(timer); timer = setInterval(next, 2000); }
+
+    nextBtn.addEventListener('click', ()=>{ next(); reset(); });
+    prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
+  </script>
+</body>
+</html>

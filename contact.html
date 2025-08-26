@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — ePalet</title>
+  <meta name="description" content="Contactează ePalet pentru oferte paleți EURO SH, reparații autorizate, transport, colectare și reciclare.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/logo-epalet.jpg" type="image/jpeg">
+
+  <!-- CSS pagină -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body class="page-contact">
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <div class="container hdr">
+      <a class="logo" href="index.html">
+        <img src="images/logo-epalet.jpg" alt="ePalet" />
+        <span>ePalet</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Navigație principală">
+        <input type="checkbox" id="nav-toggle" />
+        <label class="hamburger" for="nav-toggle" aria-label="Deschide meniul">
+          <span></span><span></span><span></span>
+        </label>
+        <ul>
+          <li><a href="index.html">Acasă</a></li>
+          <li><a href="despre-noi.html">Despre noi</a></li>
+          <li><a href="servicii.html">Servicii</a></li>
+          <li><a class="active btn small" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== SUBHERO ===== -->
+  <section class="subhero" style="background-image:url('images/hero-1.jpg')">
+    <div class="scrim"></div>
+    <div class="container">
+      <h1>Contact</h1>
+      <p class="lead">Ofertă rapidă pentru paleți <span class="nowrap">EURO&nbsp;SH</span>, transport și reparații autorizate.</p>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT GRID ===== -->
+  <section class="section contact">
+    <div class="container contact-grid">
+      <div class="info-col">
+        <div class="info-card">
+          <h3>Date de contact</h3>
+          <ul>
+            <li><strong>Email:</strong> <a href="mailto:office@epalet.ro">office@epalet.ro</a></li>
+            <li><strong>Program:</strong> Luni – Vineri / 08 – 17</li>
+            <li><strong>Adresă:</strong> Pitești, Str. Constantin Dobrogeanu Gherea nr. 5</li>
+          </ul>
+        </div>
+        <div class="dept">
+          <h3>Departamente</h3>
+          <ul>
+            <li><strong>Vânzări:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+            <li><strong>Mediu:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+            <li><strong>Transport:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="form-col">
+        <form id="contact-form" class="contact-form">
+          <div class="row">
+            <div class="field">
+              <label for="nume">Nume*</label>
+              <input type="text" id="nume" name="nume" required placeholder="Numele tău" />
+            </div>
+            <div class="field">
+              <label for="telefon">Telefon*</label>
+              <input type="tel" id="telefon" name="telefon" required placeholder="07xx xxx xxx" pattern="[0-9+ ()-]{7,}" />
+            </div>
+          </div>
+          <div class="row">
+            <div class="field">
+              <label for="email">Email*</label>
+              <input type="email" id="email" name="email" required placeholder="adresa@firma.ro" />
+            </div>
+            <div class="field">
+              <label for="companie">Companie</label>
+              <input type="text" id="companie" name="companie" placeholder="Numele companiei (opțional)" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="subiect">Subiect</label>
+            <input type="text" id="subiect" name="subiect" placeholder="Cerere ofertă paleți EURO SH" />
+          </div>
+          <div class="field">
+            <label for="mesaj">Mesaj*</label>
+            <textarea id="mesaj" name="mesaj" rows="6" required placeholder="Cantități, clase (A/B/C), locație livrare, termene etc."></textarea>
+          </div>
+
+          <label class="check">
+            <input type="checkbox" id="gdpr" required />
+            Sunt de acord cu prelucrarea datelor pentru a fi contactat(ă).
+          </label>
+
+          <div class="actions">
+            <button type="submit" class="btn">Trimite</button>
+            <small class="hint">Se deschide email către <strong>office@epalet.ro</strong> cu datele completate.</small>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HARTĂ (OpenStreetMap — iframe, fără JS) ===== -->
+  <section class="section map">
+    <div class="container">
+      <h2 class="section-title">Ne găsești aici</h2>
+
+      <iframe
+        id="map"
+        title="ePalet pe hartă"
+        src="https://www.openstreetmap.org/export/embed.html?layer=mapnik&marker=44.85665,24.86940&bbox=24.8630,44.8542,24.8758,44.8591"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+
+      <p class="map-link">
+        <a href="https://www.openstreetmap.org/?mlat=44.85665&mlon=24.86940#map=17/44.85665/24.86940" target="_blank" rel="noopener">
+          Deschide pe hartă mare
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <img src="images/logo-epalet.jpg" alt="ePalet logo" />
+        <p><strong>ePalet</strong></p>
+        <small>Program: Luni – Vineri / 08 – 17</small>
+        <small>Locație: Pitești, Str. Constantin Dobrogeanu Gherea nr. 5</small>
+      </div>
+      <div class="foot-dept">
+        <h4>Departamente</h4>
+        <ul>
+          <li><strong>Vânzări:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          <li><strong>Mediu:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          <li><strong>Transport:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+        </ul>
+      </div>
+      <div class="foot-contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:office@epalet.ro">office@epalet.ro</a></p>
+        <p>Punct de lucru: Str. C. Dobrogeanu Gherea nr. 5, Pitești/Argeș</p>
+        <p><a class="btn small" href="contact.html">Formular contact</a></p>
+      </div>
+    </div>
+    <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
+  </footer>
+
+  <!-- JS: year + mailto -->
+  <script>
+    // anul
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // mailto
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!document.getElementById('gdpr').checked) return;
+      const v = id => (document.getElementById(id).value || '').trim();
+      const subject = v('subiect') || 'Cerere ofertă paleți EURO SH';
+      const body = `Nume: ${v('nume')}
+Telefon: ${v('telefon')}
+Email: ${v('email')}
+Companie: ${v('companie')}
+
+Mesaj:
+${v('mesaj')}`.trim();
+      location.href = `mailto:office@epalet.ro?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
