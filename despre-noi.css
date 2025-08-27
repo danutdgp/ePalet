@@ -242,3 +242,140 @@ a{ color:inherit; text-decoration:none }
 @media (max-width: 480px){
   :root{ --footer-logo: 56px; }
 }
+/* ===== Background image pentru secțiunea Certificări ===== */
+.cert-grid-wrapper{
+  position: relative;
+  margin-top: 30px;
+  border-radius: 24px;
+  background: url("images/bg-certs.jpg") center/cover no-repeat;
+  padding: 60px 50px;      /* spațiu mai mare ca să se vadă fundalul */
+}
+
+/* scoatem overlay-ul alb */
+.cert-grid-wrapper::before{ display: none; }
+
+.cert-grid{
+  position: relative;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
+  z-index:1;
+}
+
+
+.cert-card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:var(--shadow);
+}
+.cert-card h3{ font-size:1.02rem; margin-bottom:.35rem }
+.cert-card p{ color:var(--muted) }
+
+/* === responsive pentru grid === */
+@media (max-width:1024px){
+  .cert-grid{ grid-template-columns:repeat(3,1fr); }
+}
+@media (max-width:768px){
+  .cert-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:480px){
+  .cert-grid{ grid-template-columns:1fr; }
+}
+.cert-card{
+  background: rgba(0,0,0,0.65);   /* negru transparent */
+  border: none;
+  border-radius:16px;
+  padding:22px;
+  color:#fff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.cert-card h3{
+  font-size: 1.25rem;             /* titlul mai mare */
+  margin-bottom:.5rem;
+  color:#fff;
+  font-weight:600;
+}
+.cert-card p{
+  font-size: 1.05rem;             /* textul mai mare */
+  color:#f5f5f5;
+  line-height: 1.6;
+}
+.cert-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.55);
+  background: rgba(0,0,0,0.8);
+}
+/* ===== Footer – media queries corecte (identic ca pe celelalte pagini) ===== */
+
+/* setăm ariile ca să putem rearanja ușor pe breakpoints */
+.footer-grid{
+  grid-template-areas: "brand dept contact";
+}
+.foot-brand   { grid-area: brand; }
+.foot-dept    { grid-area: dept; }
+.foot-contact { grid-area: contact; }
+
+/* Tabletă / laptop mic (≤1024px): 2 coloane, brand pe un rând întreg sus */
+@media (max-width: 1024px){
+  :root{ --footer-logo: 60px; }           /* logo ușor mai mic în footer */
+  .site-footer{ margin-top: 48px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "dept  contact";
+    gap: 20px 24px;
+  }
+}
+
+/* Telefon & tabletă portret (≤768px): 1 coloană, totul centrat */
+@media (max-width: 768px){
+  :root{ --footer-logo: 56px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "dept"
+      "contact";
+    gap: 16px;
+    text-align: center;
+  }
+
+  .foot-brand img{ margin: 0 auto .5rem; }
+  .foot-dept ul{
+    justify-items: center;   /* aliniază frumos listele */
+    text-align: left;        /* punctele listei rămân la stânga, dar centrăm blocul */
+    width: max-content;
+    margin: 0 auto;
+  }
+  .foot-contact .btn.small{ margin-top: .4rem; }
+}
+
+/* Telefoane foarte mici (≤400px): padding mai strâns și text mic la copyright */
+@media (max-width: 400px){
+  .footer-grid{ padding: 20px 0; }
+  .legal{ font-size: .95rem; }
+}
+/* centrare linie drepturi & an ===== */
+.site-footer .legal{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  margin: 0 auto;
+}
+
+/* opțional: font puțin mai mic pe mobil */
+@media (max-width: 480px){
+  .site-footer .legal{ font-size: .95rem; }
+}

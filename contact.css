@@ -108,13 +108,18 @@ img{ display:block; max-width:100%; height:auto }
 #map{
   display:block;
   width:100%;
-  height:360px;                 /* ajustează aici înălțimea dorită */
+  height:360px;   /* ajustează după nevoie */
   border:1px solid var(--line);
   border-radius:16px;
-  box-shadow: var(--shadow);
+  box-shadow:var(--shadow);
 }
 .map-link{ text-align:right; margin-top:6px }
 .map-link a{ text-decoration:underline; color:var(--ink) }
+
+@media (max-width:480px){
+  #map{ height:300px; }
+}
+
 
 /* ===== Footer ===== */
 .site-footer{ margin-top:28px; background:#fff; border-top:1px solid var(--line) }
@@ -135,4 +140,74 @@ img{ display:block; max-width:100%; height:auto }
 @media (min-width:481px) and (max-width:768px){
   .contact-grid{ grid-template-columns:1fr }
   .footer-grid{ grid-template-columns:1fr 1fr }
+}
+/* ===== Footer – media queries corecte (identic ca pe celelalte pagini) ===== */
+
+/* setăm ariile ca să putem rearanja ușor pe breakpoints */
+.footer-grid{
+  grid-template-areas: "brand dept contact";
+}
+.foot-brand   { grid-area: brand; }
+.foot-dept    { grid-area: dept; }
+.foot-contact { grid-area: contact; }
+
+/* Tabletă / laptop mic (≤1024px): 2 coloane, brand pe un rând întreg sus */
+@media (max-width: 1024px){
+  :root{ --footer-logo: 60px; }           /* logo ușor mai mic în footer */
+  .site-footer{ margin-top: 48px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "dept  contact";
+    gap: 20px 24px;
+  }
+}
+
+/* Telefon & tabletă portret (≤768px): 1 coloană, totul centrat */
+@media (max-width: 768px){
+  :root{ --footer-logo: 56px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "dept"
+      "contact";
+    gap: 16px;
+    text-align: center;
+  }
+
+  .foot-brand img{ margin: 0 auto .5rem; }
+  .foot-dept ul{
+    justify-items: center;   /* aliniază frumos listele */
+    text-align: left;        /* punctele listei rămân la stânga, dar centrăm blocul */
+    width: max-content;
+    margin: 0 auto;
+  }
+  .foot-contact .btn.small{ margin-top: .4rem; }
+}
+
+/* Telefoane foarte mici (≤400px): padding mai strâns și text mic la copyright */
+@media (max-width: 400px){
+  .footer-grid{ padding: 20px 0; }
+  .legal{ font-size: .95rem; }
+}
+/* centrare linie drepturi & an ===== */
+.site-footer .legal{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  margin: 0 auto;
+}
+
+/* opțional: font puțin mai mic pe mobil */
+@media (max-width: 480px){
+  .site-footer .legal{ font-size: .95rem; }
 }

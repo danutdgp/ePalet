@@ -4,25 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>ePalet — Paleți EURO SH • Reparații & Transport</title>
-  <meta name="description" content="Comercializare paleți EURO SH din stoc, reparații autorizate și transport rapid. Promptitudine, prețuri avantajoase, +10 ani experiență." />
+  <meta name="description" content="Comercializare paleți EURO SH din stoc, reparații autorizate și transport rapid. Promptitudine, prețuri avantajoase, experiență vastă." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logo-epalet.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo-epalet.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="style.css?=v3">
 </head>
 <body class="page-home">
-  <!-- ===== HEADER fix (logo stânga, pagini dreapta) ===== -->
+  <!-- ===== HEADER ===== -->
   <header class="site-header">
     <div class="container hdr">
-      <a class="logo" href="index.html" aria-label="ePalet - acasă">
+      <a class="logo" href="index.html">
         <img src="images/logo-epalet.jpg" alt="ePalet" />
-        
       </a>
-
-      <nav class="primary-nav" aria-label="Navigație principală">
+      <nav class="primary-nav">
         <input type="checkbox" id="nav-toggle" />
-        <label class="hamburger" for="nav-toggle" aria-label="Deschide meniul">
+        <label class="hamburger" for="nav-toggle">
           <span></span><span></span><span></span>
         </label>
         <ul>
@@ -35,7 +33,7 @@
     </div>
   </header>
 
-  <!-- ===== HERO / CARUSEL ===== -->
+  <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="slider" id="slider">
       <div class="slide active" style="background-image:url('images/hero-1.jpg')">
@@ -45,7 +43,6 @@
           <a href="contact.html" class="btn">CERE OFERTĂ</a>
         </div>
       </div>
-
       <div class="slide" style="background-image:url('images/hero-2.jpg')">
         <div class="overlay"></div>
         <div class="caption">
@@ -53,7 +50,6 @@
           <a href="contact.html" class="btn">CERE OFERTĂ</a>
         </div>
       </div>
-
       <div class="slide" style="background-image:url('images/hero-3.jpg')">
         <div class="overlay"></div>
         <div class="caption">
@@ -61,12 +57,9 @@
           <a href="contact.html" class="btn">CERE OFERTĂ</a>
         </div>
       </div>
-
-      <!-- doar 2 săgeți (clasă nouă .slider-btn, nu .nav) -->
-      <button class="slider-btn prev" id="prev" aria-label="Slide anterior">‹</button>
-      <button class="slider-btn next" id="next" aria-label="Slide următor">›</button>
+      <button class="slider-btn prev" id="prev">‹</button>
+      <button class="slider-btn next" id="next">›</button>
     </div>
-
     <div class="hero-belt container">
       <div class="belt-item"><span class="dot"></span> Livrare rapidă național</div>
       <div class="belt-item"><span class="dot"></span> Trasabilitate & conformitate</div>
@@ -74,51 +67,60 @@
     </div>
   </section>
 
+  <!-- ===== CERTIFICATE (ADĂUGAT AICI, între HERO și SERVICII) ===== -->
+  <section id="certificates" class="certificates-section">
+    <div class="container certificates-wrap">
+      <h2 class="section-title">Certificate</h2>
+      <ul class="cert-list" id="certList">
+        <!-- Thumbnails se generează din JS (prima pagină a PDF-ului) -->
+      </ul>
+    </div>
+  </section>
+
   <!-- ===== SERVICII ===== -->
   <section class="section services" id="servicii">
     <div class="container">
-      <h2 class="section-title pop-in">Serviciile noastre</h2>
-
+      <h2 class="section-title">Serviciile noastre</h2>
       <div class="service-grid">
-        <article class="service-card rise">
+        <article class="service-card" data-key="Reparații">
           <figure class="thumb"><img src="images/reparatii.jpg" alt="Reparații paleți Euro"></figure>
           <div class="body">
             <h3>Reparații</h3>
-            <p>Reparații rapide și conforme UIC, cu piese verificate și flux documentat.</p>
+            <p>Reparații rapide și conforme UIC.</p>
+            <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
-
-        <article class="service-card rise" style="--d:.06s">
+        <article class="service-card" data-key="Transport">
           <figure class="thumb"><img src="images/transport.jpg" alt="Transport paleți"></figure>
           <div class="body">
             <h3>Transport</h3>
-            <p>Ridicare & livrare la timp, flotă proprie și parteneri validați.</p>
+            <p>Ridicare & livrare la timp, flotă proprie.</p>
+            <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
-
-        <article class="service-card rise" style="--d:.12s">
+        <article class="service-card" data-key="Comercializare & Vânzare">
           <figure class="thumb"><img src="images/comercializare.jpg" alt="Comercializare paleți Euro SH"></figure>
           <div class="body">
             <h3>Comercializare & Vânzare</h3>
-            <p>Paleți Euro SH din stoc, clasați calitativ, pregătiți de utilizare.</p>
+            <p>Paleți Euro SH din stoc, clasați calitativ.</p>
+            <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
       </div>
+      <div id="service-popout"></div>
     </div>
   </section>
 
   <!-- ===== ÎNCREDERE ===== -->
   <section class="section trust">
     <div class="container trust-wrap">
-      <div class="trust-copy slide-left">
+      <div class="trust-copy">
         <h2>Suntem de încredere</h2>
-        <p>5 ani în industrie. Centru autorizat de colectare și reciclare deșeuri de ambalaje (paleți Euro). Deținem autorizație reparație Eur UIC, certificări ISO 9001 & 14001 și PEFC pentru lanțul de custodi.</p>
+        <p>Experiență vastă în industrie. Centru autorizat de colectare și reciclare deșeuri de ambalaje (paleți Euro). Deținem autorizație reparație Eur UIC, certificări ISO 9001 & 14001 și PEFC.</p>
         <p>Comercializare din stoc, reparații autorizate, transport eficient — un circuit complet, controlat și trasabil.</p>
-        <a class="btn" href="despre-noi.html">Află mai multe</a>
       </div>
-
-      <div class="trust-stats slide-right">
-        <div class="stat"><strong>5</strong><span>ani experiență</span></div>
+      <div class="trust-stats">
+        <div class="stat"><strong>Experiență</strong><span>vastă</span></div>
         <div class="stat"><strong>100K+</strong><span>paleți procesați</span></div>
         <div class="stat"><strong>24–48h</strong><span>livrare uzuală</span></div>
         <div class="stat"><strong>ISO</strong><span>9001 & 14001</span></div>
@@ -129,12 +131,12 @@
   <!-- ===== RECOMANDĂRI ===== -->
   <section class="section recommend">
     <div class="container">
-      <h2 class="section-title pop-in">Ce ne recomandă</h2>
+      <h2 class="section-title">Ce ne recomandă</h2>
       <div class="reco-grid">
-        <div class="reco card-tilt"><h3>Promptitudine</h3><p>Răspuns rapid, execuție fără întârzieri.</p></div>
-        <div class="reco card-tilt"><h3>Prețuri avantajoase</h3><p>Optimizăm costurile fără compromis de calitate.</p></div>
-        <div class="reco card-tilt"><h3>5 ani experiență</h3><p>Procese clare, auditate și verificate în timp.</p></div>
-        <div class="reco card-tilt"><h3>Servicii ireproșabile</h3><p>Standard ridicat, trasabilitate și conformitate.</p></div>
+        <div class="reco"><h3>Promptitudine</h3><p>Răspuns rapid, execuție fără întârzieri.</p></div>
+        <div class="reco"><h3>Prețuri avantajoase</h3><p>Optimizăm costurile fără compromis de calitate.</p></div>
+        <div class="reco"><h3>Experiență vastă</h3><p>Procese clare, auditate și verificate în timp.</p></div>
+        <div class="reco"><h3>Servicii ireproșabile</h3><p>Standard ridicat, trasabilitate și conformitate.</p></div>
       </div>
     </div>
   </section>
@@ -148,16 +150,13 @@
         <small>Program: Luni – Vineri / 08 – 17</small>
         <small>Locație: Pitești, str. Dobrogeanu Gherea nr.5</small>
       </div>
-
       <div class="foot-dept">
         <h4>Departamente</h4>
         <ul>
-          <li><strong>Vânzări:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
-          <li><strong>Mediu:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
+          <li><strong>Vânzări/Achiziții:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
           <li><strong>Transport:</strong> <a href="tel:+40000000000">0xxx xxx xxx</a></li>
         </ul>
       </div>
-
       <div class="foot-contact">
         <h4>Contact</h4>
         <p><a href="mailto:office@epalet.ro">office@epalet.ro</a></p>
@@ -168,23 +167,56 @@
     <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
   </footer>
 
-  <!-- ===== JS: an + carusel ===== -->
+  <!-- ===== JS ===== -->
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
 
+    // slider
     const slides = document.querySelectorAll('.slide');
-    const prevBtn = document.getElementById('prev');
-    const nextBtn = document.getElementById('next');
-    let i = 0;
-    let timer = setInterval(next, 2000); // autoplay 2s
+    let idx=0;
+    function show(i){ slides.forEach((s,k)=>s.classList.toggle('active',k===i)); }
+    function next(){ idx=(idx+1)%slides.length; show(idx); }
+    document.getElementById('prev').onclick=()=>{idx=(idx-1+slides.length)%slides.length;show(idx);}
+    document.getElementById('next').onclick=next;
+    setInterval(next,4000);
 
-    function show(idx){ slides.forEach((s, k)=> s.classList.toggle('active', k === idx)); }
-    function next(){ i = (i + 1) % slides.length; show(i); }
-    function prev(){ i = (i - 1 + slides.length) % slides.length; show(i); }
-    function reset(){ clearInterval(timer); timer = setInterval(next, 2000); }
-
-    nextBtn.addEventListener('click', ()=>{ next(); reset(); });
-    prevBtn.addEventListener('click', ()=>{ prev(); reset(); });
+    // popout servicii
+    const DATA={
+      'Reparații':{img:'images/popreparatii.jpg',title:'Reparații EURO — Experiență vastă',text:'Reparații rapide și conforme UIC, cu piese verificate și trasabilitate completă.'},
+      'Transport':{img:'images/transport.jpg',title:'Transport național — Experiență vastă',text:'Ridicare & livrare 24–48h, flotă proprie + parteneri validați.'},
+      'Comercializare & Vânzare':{img:'images/popcomercializare.jpg',title:'Comercializare EURO SH — Experiență vastă',text:'Paleți EURO SH din stoc, clasați calitativ (A/B/C), pregătiți pentru utilizare.'}
+    };
+    const grid=document.querySelector('.service-grid');
+    const pop=document.getElementById('service-popout');
+    let openKey=null;
+    function render(key){
+      const d=DATA[key]; if(!d){pop.innerHTML='';pop.classList.remove('open');openKey=null;return;}
+      pop.innerHTML=`
+        <div class="backdrop" style="background-image:url('${d.img}')">
+          <div class="shade"></div>
+          <div class="inner">
+            <h3>${d.title}</h3>
+            <p>${d.text}</p>
+            <div class="actions"><a class="btn small" href="contact.html">Cere ofertă</a></div>
+          </div>
+          <button class="close">✕</button>
+        </div>`;
+      pop.classList.add('open');
+      pop.querySelector('.close').onclick=()=>{pop.classList.remove('open');openKey=null;};
+    }
+    grid.addEventListener('click',e=>{
+      const card=e.target.closest('.service-card'); if(!card) return;
+      const key=card.dataset.key;
+      if(openKey===key){pop.classList.remove('open');openKey=null;return;}
+      openKey=key; render(key);
+      pop.scrollIntoView({behavior:'smooth'});
+    });
   </script>
+
+  <!-- PDF.js pentru randare PDF -->
+  <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+  <!-- Scriptul separat pentru certificate -->
+  <script defer src="certificates.js"></script>
+
 </body>
 </html>

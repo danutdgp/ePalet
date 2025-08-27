@@ -6,20 +6,16 @@
   --line:#e7edf2;
   --accent:#ff7a1a;
   --accent-2:#2db6c7;
-  --shadow: 0 14px 50px rgba(10,20,30,.15);
+  --shadow: 0 14px 40px rgba(0,0,0,.15);
   --radius: 18px;
   --container: min(1180px, 92vw);
 
-  --h1: clamp(2.2rem, 2.3vw + 1.6rem, 3.2rem);
+  --h1: clamp(2.1rem, 2.5vw + 1.4rem, 3.4rem);
   --h2: clamp(1.6rem, 1.5vw + 1rem, 2.2rem);
   --h3: clamp(1.15rem, .8vw + .9rem, 1.35rem);
   --p: clamp(1rem, .35vw + .9rem, 1.12rem);
 
-  /* header & logo ca pe celelalte pagini */
   --header-h: 72px;
-  --logo-base-h: 44px;
-  --logo-scale: 3.2;   /* mărime identică cu homepage / despre-noi */
-  /* footer logo */
   --footer-logo: 64px;
 }
 *{ box-sizing:border-box; margin:0; padding:0 }
@@ -27,17 +23,13 @@ html,body{ height:100% }
 body{
   font-family: Poppins, Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: var(--ink);
-  background:
-    radial-gradient(800px 500px at 110% 10%, rgba(45,182,199,.08) 0%, transparent 60%),
-    radial-gradient(700px 500px at -10% 0%, rgba(255,122,26,.08) 0%, transparent 60%),
-    #f7fafc;
+  background:#f7fafc;
   line-height:1.7;
-  padding-top: var(--header-h);   /* rezervăm loc sub headerul fix */
+  padding-top: var(--header-h);
 }
 img{ display:block; max-width:100%; height:auto }
 a{ color:inherit; text-decoration:none }
 .container{ width: var(--container); margin: 0 auto }
-.nowrap{ white-space: nowrap }
 
 /* ===== Butoane ===== */
 .btn{
@@ -50,28 +42,7 @@ a{ color:inherit; text-decoration:none }
 .btn:hover{ transform: translateY(-2px); filter: brightness(1.03) }
 .btn.small{ padding:.6rem .9rem; font-size:.95rem }
 
-/* ===== Secțiuni / animații ===== */
-.section{ padding: clamp(48px, 6vw, 90px) 0 }
-.section-title{
-  font-size: var(--h2); text-align:center;
-  margin-bottom: clamp(22px, 2.6vw, 38px);
-  position:relative; display:inline-block;
-  left:50%; transform:translateX(-50%);
-}
-.pop-in{ animation: pop .6s ease both }
-.reveal-down{ animation: revealDown .65s ease both }
-.reveal-up{ animation: revealUp .65s ease both }
-.reveal-left{ animation: revealLeft .65s ease both }
-.reveal-right{ animation: revealRight .65s ease both }
-.rise{ animation: rise .65s ease both; animation-delay: var(--d, .02s) }
-@keyframes pop{ from{opacity:0; transform:translateX(-50%) scale(.96)} to{opacity:1; transform:translateX(-50%) scale(1)} }
-@keyframes revealDown{ from{opacity:0; transform:translateY(-18px)} to{opacity:1; transform:translateY(0)} }
-@keyframes revealUp{ from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
-@keyframes revealLeft{ from{opacity:0; transform:translateX(-22px)} to{opacity:1; transform:translateX(0)} }
-@keyframes revealRight{ from{opacity:0; transform:translateX(22px)} to{opacity:1; transform:translateX(0)} }
-@keyframes rise{ from{opacity:0; transform:translateY(18px)} to{opacity:1; transform:translateY(0)} }
-
-/* ===== HEADER (fix, logo .jpg mare fără să crească bara) ===== */
+/* ===== HEADER (identic cu pagina principală) ===== */
 .site-header{
   position: fixed; top:0; left:0; right:0;
   height: var(--header-h);
@@ -81,34 +52,87 @@ a{ color:inherit; text-decoration:none }
   border-bottom: 1px solid var(--line);
   overflow: visible;
 }
-.hdr{ height:100%; display:flex; align-items:center; gap: clamp(24px, 8vw, 220px) }
-.logo{ display:flex; align-items:center; gap:.6rem; font-weight:700; position:relative }
-.logo img{
-  height: var(--logo-base-h); width:auto;
-  transform: scale(var(--logo-scale)); transform-origin: left center;
-  display:block; will-change: transform;
-}
+.hdr{ height:100%; display:flex; align-items:center; gap: 16px; }
+.logo{ display:flex; align-items:center; gap:.6rem; font-weight:700 }
+.logo img{ width:40px; height:40px }
 .logo span{ font-size:1.1rem }
 
 .primary-nav{ margin-left:auto; position:relative; display:flex; align-items:center }
-.primary-nav ul{
-  list-style:none; display:flex; align-items:center; gap:1rem;
-}
+.primary-nav ul{ list-style:none; display:flex; align-items:center; gap:1rem }
 .primary-nav li a{
-  padding:.45rem .65rem; border-radius:10px; color:#0d1a22; white-space:nowrap;
+  display:flex; align-items:center; justify-content:center;
+  height:38px; padding:0 14px;
+  border-radius:10px; color:#0d1a22; white-space:nowrap;
 }
 .primary-nav li a:hover,
 .primary-nav li a.active{ background:#f1f6fa }
 
-/* hamburger */
+/* burger */
 #nav-toggle{ display:none }
 .hamburger{ display:none; cursor:pointer; padding:.3rem .2rem; border-radius:8px; margin-left:.4rem }
-.hamburger span{
-  display:block; width:26px; height:2px; background:#0d1a22; margin:6px 0;
-  transition: transform .3s ease, opacity .3s ease;
-}
+.hamburger span{ display:block; width:26px; height:2px; background:#0d1a22; margin:6px 0; transition:.3s }
 
-/* Mobil/Tabletă */
+/* ===== SUBHERO ===== */
+.subhero{
+  position:relative; background-size:cover; background-position:center;
+  min-height:420px; display:flex; align-items:center;
+}
+.subhero .scrim{ position:absolute; inset:0; background:rgba(0,0,0,.45) }
+.subhero .container{ position:relative; z-index:2; text-align:center; color:#fff }
+.subhero h1{ font-size: var(--h1); text-shadow:0 6px 20px rgba(0,0,0,.6) }
+.subhero .lead{ max-width:900px; margin:10px auto 0; text-shadow:0 4px 16px rgba(0,0,0,.6) }
+
+/* ===== SERVICII ===== */
+.section{ padding: clamp(48px, 6vw, 90px) 0 }
+.svc{ margin-top:60px; }
+
+/* Desktop: 3 sus + 2 centrate jos (6 coloane, fiecare card span 2) */
+.svc-grid{
+  display:grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap:28px;
+  justify-content:center;
+}
+.svc-card{
+  position:relative;
+  border-radius:20px;
+  overflow:hidden;
+  min-height:260px;
+  background-size:cover;
+  background-position:center;
+  display:flex; align-items:flex-end;
+  box-shadow: var(--shadow);
+  transition: transform .25s ease, box-shadow .25s ease;
+  grid-column: span 2;                  /* card = 2 coloane */
+}
+/* ultimele 2 carduri centrate perfect sub primele 3 */
+.svc-card:nth-child(4){ grid-column: 2 / span 2; }  /* col 2-3 */
+.svc-card:nth-child(5){ grid-column: 4 / span 2; }  /* col 4-5 */
+
+/* Overlay ÎNTUNECAT + text alb vizibil (NU alb translucid) */
+.svc-card .overlay{
+  position:absolute; inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.65));
+}
+.svc-card .content{
+  position:relative; z-index:2; padding:20px; color:#fff;
+  text-shadow:0 2px 8px rgba(0,0,0,.45);
+}
+.svc-card h2{ font-size:1.3rem; margin-bottom:.5rem; color:#fff }
+.svc-card p{ color:#eef3f6; margin-bottom:.6rem; line-height:1.6 }
+.svc-card ul{ padding-left:1.1rem; color:#eef3f6; font-size:.95rem }
+.svc-card ul li{ margin:.25rem 0; list-style:disc inside }
+.svc-card:hover{ transform:translateY(-6px); box-shadow:0 16px 36px rgba(0,0,0,.25) }
+.svc-card:hover .overlay{ background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.8)) }
+
+/* ===== FOOTER ===== */
+.site-footer{ margin-top:40px; background:#fff; border-top:1px solid var(--line); color:var(--ink) }
+.footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:22px; padding:26px 0 }
+.foot-brand img{ width: var(--footer-logo); height: var(--footer-logo); margin-bottom:.5rem }
+
+/* ===== MEDIA QUERIES ===== */
+
+/* Tabletă (≤1024px): meniu burger + 2 coloane egale */
 @media (max-width: 1024px){
   .hamburger{ display:block }
   .primary-nav ul{
@@ -118,88 +142,134 @@ a{ color:inherit; text-decoration:none }
     flex-direction:column; gap:.25rem; display:none; min-width: 220px;
   }
   #nav-toggle:checked ~ ul{ display:flex }
-
   #nav-toggle:checked + .hamburger span:nth-child(1){ transform: translateY(8px) rotate(45deg) }
   #nav-toggle:checked + .hamburger span:nth-child(2){ opacity:0 }
   #nav-toggle:checked + .hamburger span:nth-child(3){ transform: translateY(-8px) rotate(-45deg) }
+
+  .subhero{ min-height:360px }
+
+  .svc-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .svc-card{ grid-column: auto / span 1; }               /* IMPORTANT: anulăm span 2 */
+  .svc-card:nth-child(4),
+  .svc-card:nth-child(5){ grid-column:auto / span 1; }   /* și poziționările speciale */
 }
 
-/* ===== SUBHERO ===== */
-.subhero{
-  position:relative; background-size:cover; background-position:center;
-  min-height: 340px; display:flex; align-items:center;
-  border-bottom:1px solid var(--line);
+/* Telefon / phablet (≤768px): 1 coloană */
+@media (max-width: 768px){
+  .subhero{ min-height:320px }
+  .section{ padding: 48px 0 }
+  .svc-grid{ grid-template-columns: 1fr; gap:22px }
+  .svc-card{ min-height:240px; grid-column:auto / span 1; }  /* FORȚĂM 1 coloană */
+  .svc-card h2{ font-size:1.2rem }
+  .svc-card p, .svc-card ul{ font-size:.98rem }
 }
-.subhero .scrim{
-  position:absolute; inset:0;
-  background: linear-gradient(120deg, rgba(11,15,18,.25), rgba(11,15,18,.55) 58%, rgba(11,15,18,.1));
-}
-.subhero .container{ position:relative; z-index:2 }
-.subhero h1{ font-size: var(--h1); color:#fff; text-shadow: 0 10px 26px rgba(0,0,0,.35) }
-.subhero .lead{ color:#eef4f7; max-width: 860px; margin-top:.4rem }
 
-/* ===== SERVICII ===== */
-.svc-grid{
-  display:grid; gap:18px;
-  grid-template-columns: repeat(3, 1fr);
+/* Telefon mic (≤480px): tipografie & spații */
+@media (max-width: 480px){
+  .subhero{ min-height:280px }
+  .svc-card{ min-height:220px; border-radius:16px }
+  .svc-card .content{ padding:16px }
+  .svc-card h2{ font-size:1.1rem }
+  .svc-card p, .svc-card ul{ font-size:.95rem }
 }
-.svc-card{
-  background:#fff; border:1px solid var(--line); border-radius:16px; padding:18px; box-shadow:var(--shadow);
-}
-.svc-card h2{ font-size:1.15rem; margin-bottom:.4rem }
-.svc-card p{ color:var(--muted); margin-bottom:.4rem }
-.svc-card ul{ padding-left:1.1rem; color:var(--muted) }
-.svc-card ul li{ margin:.25rem 0 }
+/* ===== Footer – media queries corecte (identic ca pe celelalte pagini) ===== */
 
-/* ===== CTA ===== */
-.cta{
-  background: linear-gradient(180deg, rgba(255,122,26,.07), rgba(255,122,26,.02));
-  border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+/* setăm ariile ca să putem rearanja ușor pe breakpoints */
+.footer-grid{
+  grid-template-areas: "brand dept contact";
 }
-.cta-wrap{
-  padding: 26px 0;
-  display:flex; align-items:center; justify-content:space-between; gap:18px;
-}
-.cta-copy h2{ font-size: clamp(1.6rem, 1.2vw + 1rem, 2rem) }
-.cta-copy p{ color:var(--muted) }
+.foot-brand   { grid-area: brand; }
+.foot-dept    { grid-area: dept; }
+.foot-contact { grid-area: contact; }
 
-/* ===== FOOTER (logo .jpg mai mare) ===== */
-.site-footer{ margin-top:28px; background:#fff; border-top:1px solid var(--line); color:var(--ink) }
-.footer-grid{ display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:22px; padding:26px 0 }
-.foot-brand img{
-  width: var(--footer-logo); height: var(--footer-logo);
-  margin-bottom:.55rem;
-}
-.foot-brand small{ display:block; color:var(--muted) }
-.foot-dept h4, .foot-contact h4{ margin-bottom:.4rem }
-.foot-dept ul{ list-style:none; display:grid; gap:.25rem }
-.foot-dept a{ color:#0f1820; text-decoration:underline dotted transparent }
-.foot-dept a:hover{ text-decoration-color:#0f1820 }
-.foot-contact p{ color:var(--muted); margin:.2rem 0 }
-.foot-contact .btn.small{ margin-top:.3rem }
-.legal{ border-top:1px solid var(--line); text-align:center; padding:12px 0; color:var(--muted) }
+/* Tabletă / laptop mic (≤1024px): 2 coloane, brand pe un rând întreg sus */
+@media (max-width: 1024px){
+  :root{ --footer-logo: 60px; }           /* logo ușor mai mic în footer */
+  .site-footer{ margin-top: 48px; }
 
-/* ===== Media Queries ===== */
-@media (max-width:480px){
-  .subhero{ min-height: 260px }
-  .svc-grid{ grid-template-columns: 1fr }
-  .cta-wrap{ flex-direction:column; align-items:flex-start }
+  .footer-grid{
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "brand brand"
+      "dept  contact";
+    gap: 20px 24px;
+  }
+}
 
-  /* logo safe pe mobil + footer un pic mai mic */
-  :root{ --logo-scale: 1.8; --logo-base-h: 40px; --footer-logo: 56px; }
-  .footer-grid{ grid-template-columns:1fr }
+/* Telefon & tabletă portret (≤768px): 1 coloană, totul centrat */
+@media (max-width: 768px){
+  :root{ --footer-logo: 56px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "dept"
+      "contact";
+    gap: 16px;
+    text-align: center;
+  }
+
+  .foot-brand img{ margin: 0 auto .5rem; }
+  .foot-dept ul{
+    justify-items: center;   /* aliniază frumos listele */
+    text-align: left;        /* punctele listei rămân la stânga, dar centrăm blocul */
+    width: max-content;
+    margin: 0 auto;
+  }
+  .foot-contact .btn.small{ margin-top: .4rem; }
 }
-@media (max-height:500px) and (max-width:900px){
-  .subhero{ min-height: 280px }
-  .svc-grid{ grid-template-columns: repeat(2, 1fr) }
+
+/* Telefoane foarte mici (≤400px): padding mai strâns și text mic la copyright */
+@media (max-width: 400px){
+  .footer-grid{ padding: 20px 0; }
+  .legal{ font-size: .95rem; }
 }
-@media (min-width:481px) and (max-width:768px){
-  .svc-grid{ grid-template-columns: repeat(2, 1fr) }
-  .footer-grid{ grid-template-columns:1fr 1fr }
+/* centrare linie drepturi & an ===== */
+.site-footer .legal{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 12px 0;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  margin: 0 auto;
 }
-@media (min-width:769px) and (max-width:1024px){
-  .svc-grid{ grid-template-columns: repeat(3, 1fr) }
+
+/* opțional: font puțin mai mic pe mobil */
+@media (max-width: 480px){
+  .site-footer .legal{ font-size: .95rem; }
 }
-@media (min-width:1280px){
-  :root{ --logo-scale: 3.6; }  /* ca pe desktop mare */
+/* === LOGO ca pe restul paginilor — override final (Servicii) === */
+:root{
+  --header-h: 72px;      /* bara rămâne la aceeași înălțime */
+  --logo-base-h: 44px;   /* înălțimea reală a imaginii <img> */
+  --logo-scale: 3.2;     /* mărimea vizuală a logo-ului (prin scale) */
+}
+
+/* nu mărim bara; permitem logo-ului să „iasă” peste ea dacă e nevoie */
+.site-header{ height: var(--header-h) !important; overflow: visible; }
+
+/* puțin spațiu între logo și meniu, ca pe celelalte pagini */
+.container.hdr{ gap: clamp(28px, 8vw, 220px) !important; }
+
+/* logo mare, fără să forțăm width/height fixe */
+.logo img{
+  height: var(--logo-base-h) !important;
+  width: auto !important;
+  transform: scale(var(--logo-scale));
+  transform-origin: left center;
+  display: block;
+}
+
+/* desktop mare: un strop mai mare, ca pe celelalte pagini */
+@media (min-width: 1280px){
+  :root{ --logo-scale: 3.6; }
+}
+
+/* pe mobil: ușor mai mic, să nu atingă burgerul */
+@media (max-width: 480px){
+  :root{ --logo-scale: 1.8; --logo-base-h: 40px; }
 }
