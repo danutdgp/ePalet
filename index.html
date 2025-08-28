@@ -74,9 +74,7 @@
   <section id="certificates" class="certificates-section">
     <div class="container certificates-wrap">
       <h2 class="section-title">Certificate și licențe</h2>
-      <ul class="cert-list" id="certList">
-        <!-- thumbnails generate cu JS -->
-      </ul>
+      <ul class="cert-list" id="certList"></ul>
     </div>
   </section>
 
@@ -84,7 +82,19 @@
   <section class="section services" id="servicii">
     <div class="container">
       <h2 class="section-title">Serviciile noastre</h2>
+
       <div class="service-grid">
+        <!-- STÂNGA: ACHIZIȚIE -->
+        <article class="service-card" data-key="Achiziție">
+          <figure class="thumb"><img src="images/comercializare.webp" alt="Achiziție paleți EURO"></figure>
+          <div class="body">
+            <h3>Achiziție</h3>
+            <p><strong>Achiziție Paleți EURO</strong><br>Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.</p>
+            <span class="hint-more">Află mai multe ▼</span>
+          </div>
+        </article>
+
+        <!-- MIJLOC: REPARAȚII (nemodificat) -->
         <article class="service-card" data-key="Reparații">
           <figure class="thumb"><img src="images/reparatii.webp" alt="Reparații paleți Euro"></figure>
           <div class="body">
@@ -93,23 +103,18 @@
             <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
-        <article class="service-card" data-key="Transport">
-          <figure class="thumb"><img src="images/transport.webp" alt="Transport paleți"></figure>
-          <div class="body">
-            <h3>Transport</h3>
-            <p>Ridicare & livrare la timp, flotă proprie.</p>
-            <span class="hint-more">Află mai multe ▼</span>
-          </div>
-        </article>
+
+        <!-- DREAPTA: VÂNZARE -->
         <article class="service-card" data-key="Comercializare & Vânzare">
-          <figure class="thumb"><img src="images/comercializare.webp" alt="Comercializare paleți Euro SH"></figure>
+          <figure class="thumb"><img src="images/comercializare.webp" alt="Vânzare paleți EURO SH"></figure>
           <div class="body">
-            <h3>Comercializare & Vânzare</h3>
-            <p>Paleți Euro SH din stoc, clasați calitativ.</p>
+            <h3>Vânzare</h3>
+            <p><strong>Comercializare EURO SH — Experiență vastă</strong><br>Fie că doriți să achiziționați paleți de calitate superioară sau să valorificați surplusul de paleți, la ePalet găsiți soluția potrivită. <strong>Vânzare Paleți EURO Second-Hand</strong> — Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în Clasa A (calitate superioară) și Clasa B (standard). Astfel, puteți alege cu încredere produsul potrivit.</p>
             <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
       </div>
+
       <div id="service-popout"></div>
     </div>
   </section>
@@ -144,72 +149,51 @@
     </div>
   </section>
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="container footer-grid">
-    <div class="foot-brand">
-      <img src="images/logo-epalet.webp" alt="ePalet logo">
-      <p><strong>ePalet</strong></p>
-      <small>Program: Luni – Vineri / 08 – 17</small>
-      <small>Locație: Pitești, str. Dobrogeanu Gherea nr.5</small>
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="foot-brand">
+        <img src="images/logo-epalet.webp" alt="ePalet logo">
+        <p><strong>ePalet</strong></p>
+        <small>Program: Luni – Vineri / 08 – 17</small>
+        <small>Locație: Pitești, str. Dobrogeanu Gherea nr.5</small>
 
-      <!-- Social -->
-      <ul class="social">
-        <li>
-          <a href="https://web.facebook.com/profile.php?id=61579701821488" target="_blank" rel="noopener" aria-label="Facebook ePalet" class="icon-btn">
-            <!-- Facebook SVG -->
-            <svg viewBox="0 0 24 24" class="icon"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/epalet_romania/" target="_blank" rel="noopener" aria-label="Instagram ePalet" class="icon-btn">
-            <!-- Instagram SVG -->
-            <svg viewBox="0 0 24 24" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 1-1-1 1 1 0 0 1 1 1z"/></svg>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/george-ghimpeteanu-8a8262381/" target="_blank" rel="noopener" aria-label="LinkedIn ePalet" class="icon-btn">
-            <!-- LinkedIn SVG -->
-            <svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3V22h-3zM8.5 8.5h2.9v1.84h.04c.4-.76 1.39-1.56 2.86-1.56 3.06 0 3.62 2.01 3.62 4.62V22h-3v-5.97c0-1.42-.02-3.26-1.99-3.26-1.99 0-2.29 1.55-2.29 3.16V22h-3z"/></svg>
-          </a>
-        </li>
-      </ul>
+        <ul class="social">
+          <li><a href="https://web.facebook.com/profile.php?id=61579701821488" target="_blank" rel="noopener" aria-label="Facebook ePalet" class="icon-btn"><svg viewBox="0 0 24 24" class="icon"><path d="M22 12.06C22 6.51 17.52 2 12 2S2 6.51 2 12.06c0 5 3.66 9.15 8.44 9.94v-7.03H7.9v-2.9h2.54V9.41c0-2.5 1.49-3.89 3.78-3.89 1.1 0 2.25.2 2.25.2v2.48h-1.27c-1.25 0-1.64.78-1.64 1.58v1.9h2.78l-.44 2.9h-2.34V22c4.78-.79 8.44-4.94 8.44-9.94z"/></svg></a></li>
+          <li><a href="https://www.instagram.com/epalet_romania/" target="_blank" rel="noopener" aria-label="Instagram ePalet" class="icon-btn"><svg viewBox="0 0 24 24" class="icon"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5A5.5 5.5 0 1 1 6.5 13 5.51 5.51 0 0 1 12 7.5zm0 2A3.5 3.5 0 1 0 15.5 13 3.5 3.5 0 0 0 12 9.5zM18 6.8a1 1 0 1 1-1-1 1 1 0 0 1 1 1z"/></svg></a></li>
+          <li><a href="https://www.linkedin.com/in/george-ghimpeteanu-8a8262381/" target="_blank" rel="noopener" aria-label="LinkedIn ePalet" class="icon-btn"><svg viewBox="0 0 24 24" class="icon"><path d="M4.98 3.5C4.98 4.6 4.1 5.5 3 5.5S1 4.6 1 3.5 1.9 1.5 3 1.5s1.98.9 1.98 2zM1.5 8.5h3V22h-3zM8.5 8.5h2.9v1.84h.04c.4-.76 1.39-1.56 2.86-1.56 3.06 0 3.62 2.01 3.62 4.62V22h-3v-5.97c0-1.42-.02-3.26-1.99-3.26-1.99 0-2.29 1.55-2.29 3.16V22h-3z"/></svg></a></li>
+        </ul>
+      </div>
+
+      <div class="foot-dept">
+        <h4>Departamente</h4>
+        <ul class="dept-list">
+          <li>
+            <strong>Vânzări/Achiziții:</strong>
+            <a href="tel:+40765709384">0765709384</a>
+            <a class="wa" href="https://wa.me/40765709384" target="_blank" rel="noopener" aria-label="WhatsApp Vânzări/Achiziții">
+              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.5 0 .2 5.29.2 11.83c0 2.09.55 4.06 1.6 5.85L0 24l6.5-1.7a11.8 11.8 0 0 0 5.56 1.42h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.4-8.4zM12.07 21.4h-.01a9.8 9.8 0 0 1-4.98-1.37l-.36-.21-3.86 1.01 1.03-3.76-.23-.39a9.8 9.8 0 0 1-1.52-5.24C2.14 6.4 6.4 2.15 12.06 2.15c2.6 0 5.04 1.01 6.88 2.85a9.68 9.68 0 0 1 2.85 6.83c0 5.66-4.26 9.92-9.72 9.92zm5.66-7.33c-.31-.16-1.84-.9-2.12-1-.28-.1-.48-.16-.68.16-.2.31-.78 1-.95 1.21-.17.21-.35.24-.66.08-.31-.16-1.29-.47-2.46-1.5-.91-.81-1.52-1.81-1.7-2.11-.18-.31-.02-.48.14-.64.14-.13.31-.35.46-.52.15-.17.2-.29.31-.5.1-.21.05-.39-.01-.55-.16-.39-.68-1.82-.94-2.5-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.39-.27.31-1.03 1-1.03 2.43s1.06 2.82 1.21 3.02c.15.21 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.22 1.35.19 1.86.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36z"/></svg>
+            </a>
+          </li>
+          <li>
+            <strong>Transport:</strong>
+            <a href="tel:+40749280629">0749280629</a>
+            <a class="wa" href="https://wa.me/40749280629" target="_blank" rel="noopener" aria-label="WhatsApp Transport">
+              <svg viewBox="0 0 24 24" class="wa-icon"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.5 0 .2 5.29.2 11.83c0 2.09.55 4.06 1.6 5.85L0 24l6.5-1.7a11.8 11.8 0 0 0 5.56 1.42h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.4-8.4zM12.07 21.4h-.01a9.8 9.8 0 0 1-4.98-1.37l-.36-.21-3.86 1.01 1.03-3.76-.23-.39a9.8 9.8 0 0 1-1.52-5.24C2.14 6.4 6.4 2.15 12.06 2.15c2.6 0 5.04 1.01 6.88 2.85a9.68 9.68 0 0 1 2.85 6.83c0 5.66-4.26 9.92-9.72 9.92zm5.66-7.33c-.31-.16-1.84-.9-2.12-1-.28-.1-.48-.16-.68.16-.2.31-.78 1-.95 1.21-.17.21-.35.24-.66.08-.31-.16-1.29-.47-2.46-1.5-.91-.81-1.52-1.81-1.7-2.11-.18-.31-.02-.48.14-.64.14-.13.31-.35.46-.52.15-.17.2-.29.31-.5.1-.21.05-.39-.01-.55-.16-.39-.68-1.82-.94-2.5-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.39-.27.31-1.03 1-1.03 2.43s1.06 2.82 1.21 3.02c.15.21 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.22 1.35.19 1.86.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36z"/></svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="foot-contact">
+        <h4>Contact</h4>
+        <p><a href="mailto:office@epalet.ro">office@epalet.ro</a></p>
+        <p>Punct de lucru: Dobrogeanu Gherea Nr.5, Pitești/Argeș</p>
+        <p><a class="btn small" href="contact.html">Formular contact</a></p>
+      </div>
     </div>
-
-
-    <!-- Departamente cu icon WhatsApp -->
-    <div class="foot-dept">
-      <h4>Departamente</h4>
-      <ul class="dept-list">
-        <li>
-          <strong>Vânzări/Achiziții:</strong>
-          <a href="tel:+40765709384">0765709384</a>
-          <a class="wa" href="https://wa.me/40765709384" target="_blank" rel="noopener" aria-label="WhatsApp Vânzări/Achiziții">
-            <!-- WhatsApp SVG -->
-            <svg viewBox="0 0 24 24" class="wa-icon"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.5 0 .2 5.29.2 11.83c0 2.09.55 4.06 1.6 5.85L0 24l6.5-1.7a11.8 11.8 0 0 0 5.56 1.42h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.4-8.4zM12.07 21.4h-.01a9.8 9.8 0 0 1-4.98-1.37l-.36-.21-3.86 1.01 1.03-3.76-.23-.39a9.8 9.8 0 0 1-1.52-5.24C2.14 6.4 6.4 2.15 12.06 2.15c2.6 0 5.04 1.01 6.88 2.85a9.68 9.68 0 0 1 2.85 6.83c0 5.66-4.26 9.92-9.72 9.92zm5.66-7.33c-.31-.16-1.84-.9-2.12-1-.28-.1-.48-.16-.68.16-.2.31-.78 1-.95 1.21-.17.21-.35.24-.66.08-.31-.16-1.29-.47-2.46-1.5-.91-.81-1.52-1.81-1.7-2.11-.18-.31-.02-.48.14-.64.14-.13.31-.35.46-.52.15-.17.2-.29.31-.5.1-.21.05-.39-.01-.55-.16-.39-.68-1.82-.94-2.5-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.39-.27.31-1.03 1-1.03 2.43s1.06 2.82 1.21 3.02c.15.21 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.22 1.35.19 1.86.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36z"/></svg>
-          </a>
-        </li>
-        <li>
-          <strong>Transport:</strong>
-          <a href="tel:+40749280629">0749280629</a>
-          <a class="wa" href="https://wa.me/40749280629" target="_blank" rel="noopener" aria-label="WhatsApp Transport">
-            <svg viewBox="0 0 24 24" class="wa-icon"><path d="M20.52 3.48A11.9 11.9 0 0 0 12.06 0C5.5 0 .2 5.29.2 11.83c0 2.09.55 4.06 1.6 5.85L0 24l6.5-1.7a11.8 11.8 0 0 0 5.56 1.42h.01c6.55 0 11.85-5.3 11.85-11.84 0-3.16-1.23-6.13-3.4-8.4zM12.07 21.4h-.01a9.8 9.8 0 0 1-4.98-1.37l-.36-.21-3.86 1.01 1.03-3.76-.23-.39a9.8 9.8 0 0 1-1.52-5.24C2.14 6.4 6.4 2.15 12.06 2.15c2.6 0 5.04 1.01 6.88 2.85a9.68 9.68 0 0 1 2.85 6.83c0 5.66-4.26 9.92-9.72 9.92zm5.66-7.33c-.31-.16-1.84-.9-2.12-1-.28-.1-.48-.16-.68.16-.2.31-.78 1-.95 1.21-.17.21-.35.24-.66.08-.31-.16-1.29-.47-2.46-1.5-.91-.81-1.52-1.81-1.7-2.11-.18-.31-.02-.48.14-.64.14-.13.31-.35.46-.52.15-.17.2-.29.31-.5.1-.21.05-.39-.01-.55-.16-.39-.68-1.82-.94-2.5-.24-.58-.49-.5-.68-.51l-.58-.01c-.2 0-.52.07-.79.39-.27.31-1.03 1-1.03 2.43s1.06 2.82 1.21 3.02c.15.21 2.08 3.18 5.04 4.46.7.3 1.25.48 1.68.61.71.22 1.35.19 1.86.12.57-.08 1.84-.75 2.1-1.47.26-.72.26-1.34.18-1.47-.08-.13-.28-.2-.59-.36z"/></svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="foot-contact">
-      <h4>Contact</h4>
-      <p><a href="mailto:office@epalet.ro">office@epalet.ro</a></p>
-      <p>Punct de lucru: Dobrogeanu Gherea Nr.5, Pitești/Argeș</p>
-      <p><a class="btn small" href="contact.html">Formular contact</a></p>
-    </div>
-  </div>
-
-  <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
-</footer>
-
+    <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
+  </footer>
 
   <!-- ===== JS ===== -->
   <script>
@@ -225,27 +209,25 @@
     setInterval(next,4000);
 
     // popout servicii
-const DATA={
-'Reparații':{
-  img:'images/popreparatii.webp',
-  title:'Pionieri în România: Reparații Paleți EURO cu Certificare PEFC Reciclat',
-  text:'Fiind certificată <strong>PEFC Reciclat</strong> pentru reparația paleților, compania noastră vă oferă un avantaj competitiv unic. Vă garantăm nu doar reparații executate la cele mai înalte standarde, sub licență oficială <strong>UIC-EUR</strong>, ci și soluția definitivă pentru conformitatea afacerii dumneavoastră. Echipa noastră de specialiști, folosind echipamente de ultimă generație, asigură calitatea și siguranța fiecărui palet recondiționat.<br><br>Beneficiul direct și crucial este <strong>exonerarea completă de la obligațiile complexe ale Regulamentului European privind Defrișările (EUDR)</strong>, asigurată prin certificarea noastră. Astfel, eliminați riscurile birocratice și vă asigurați un lanț logistic fluid pentru paleții dumneavoastră, a cărui calitate este susținută și de certificările <strong>ISO 9001:2015</strong> și <strong>ISO 14001:2015</strong>.'
-},
+    const DATA={
+      'Achiziție':{
+        img:'images/comercializare.webp',
+        title:'Achiziție Paleți EURO',
+        text:'Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.'
+      },
 
+      'Reparații':{
+        img:'images/popreparatii.webp',
+        title:'Pionieri în România: Reparații Paleți EURO cu Certificare PEFC Reciclat',
+        text:'Fiind certificată <strong>PEFC Reciclat</strong> pentru reparația paleților, compania noastră vă oferă un avantaj competitiv unic. Vă garantăm nu doar reparații executate la cele mai înalte standarde, sub licență oficială <strong>UIC-EUR</strong>, ci și soluția definitivă pentru conformitatea afacerii dumneavoastră. Echipa noastră de specialiști, folosind echipamente de ultimă generație, asigură calitatea și siguranța fiecărui palet recondiționat.<br><br>Beneficiul direct și crucial este <strong>exonerarea completă de la obligațiile complexe ale Regulamentului European privind Defrișările (EUDR)</strong>, asigurată prin certificarea noastră. Astfel, eliminați riscurile birocratice și vă asigurați un lanț logistic fluid pentru paleții dumneavoastră, a cărui calitate este susținută și de certificările <strong>ISO 9001:2015</strong> și <strong>ISO 14001:2015</strong>.'
+      },
 
-'Transport':{
-  img:'images/transport.webp',
-  title:'Transport național — Experiență vastă',
-  text:'Asigurăm transport rapid de marfă paletizată oriunde în România, direct la destinația dorită. Prin combinația strategică dintre <strong>flota proprie modernă</strong> și o rețea extinsă de <strong>parteneri validați</strong>, garantăm flexibilitate maximă și <strong>ridicarea & livrarea comenzilor în 24–48 de ore</strong>. Indiferent de volum, de la câțiva paleți la un camion complet, vă oferim o soluție logistică sigură, punctuală și perfect adaptată nevoilor dumneavoastră.'
-},
-
-'Comercializare & Vânzare':{
-  img:'images/popcomercializare.webp',
-  title:'Comercializare EURO SH — Experiență vastă',
-  text:'Fie că doriți să achiziționați paleți de calitate superioară sau să valorificați surplusul de paleți, la <strong>ePalet</strong> găsiți soluția potrivită.<br><br><strong>Vânzare Paleți EURO Second-Hand</strong><br><br>Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în <strong>Clasa&nbsp;A</strong> (calitate superioară) și <strong>Clasa&nbsp;B</strong> (standard). Astfel, puteți alege cu încredere produsul care se potrivește perfect cerințelor dumneavoastră logistice și bugetare, având garanția unui palet funcțional și sigur.<br><br><strong>Achiziție Paleți EURO</strong><br><br>Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.'
-},
-
-};
+      'Comercializare & Vânzare':{
+        img:'images/popcomercializare.webp',
+        title:'Comercializare EURO SH — Experiență vastă',
+        text:'Fie că doriți să achiziționați paleți de calitate superioară sau să valorificați surplusul de paleți, la <strong>ePalet</strong> găsiți soluția potrivită.<br><br><strong>Vânzare Paleți EURO Second-Hand</strong><br><br>Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în <strong>Clasa&nbsp;A</strong> (calitate superioară) și <strong>Clasa&nbsp;B</strong> (standard). Astfel, puteți alege cu încredere produsul care se potrivește perfect cerințelor dumneavoastră logistice și bugetare, având garanția unui palet funcțional și sigur.'
+      }
+    };
 
     const grid=document.querySelector('.service-grid');
     const pop=document.getElementById('service-popout');
@@ -276,8 +258,6 @@ const DATA={
 
   <!-- PDF.js pentru randare PDF -->
   <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
-  <!-- Scriptul separat pentru certificate -->
   <script defer src="certificates.js"></script>
-
 </body>
 </html>
