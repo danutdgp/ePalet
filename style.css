@@ -532,3 +532,9 @@ a{ color:inherit; text-decoration:none }
 #service-popout{
   scroll-margin-top: calc(var(--header-h) + 12px);
 }
+/* Cardul special, puțin mai lung */
+.hero-belt .belt-item.long {
+  padding-left: 1.4rem;   /* mai mult spațiu stânga */
+  padding-right: 1.4rem;  /* mai mult spațiu dreapta */
+  min-width: 460px;       /* îl face un pic mai lung decât restul */
+}

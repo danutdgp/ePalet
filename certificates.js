@@ -11,10 +11,11 @@
 
     const CERTS = [
     { title: "Certificat ISO 9001",   url: "certificates/iso9001.pdf" },
+    { title: "Certificat PEFC",       url: "certificates/pefc.pdf" },
     { title: "Certificat ISO 14001",  url: "certificates/iso14001.pdf" },
     { title: "LICENȚA REPARAȚIE UIC-EUR",  url: "certificates/reparatie.pdf" },
     { title: "LICENȚA INTERMEDIERE TRANSPORT", url: "certificates/licenta-arr.pdf" },
-    { title: "Certificat PEFC",       url: "certificates/pefc.pdf" },
+
   ];
 
   // === Generează thumbnails (prima pagină)
