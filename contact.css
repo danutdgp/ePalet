@@ -218,3 +218,9 @@ img{ display:block; max-width:100%; height:auto }
     --footer-logo: 90px;   /* footer logo */
   }
 }
+/* === LOGO ȘI MAI MARE, FĂRĂ SĂ CREASCĂ HEADERUL === */
+:root{
+  --header-h: 70px;     /* bara rămâne subțire */
+  --logo-base-h: 60px;  /* mărimea “reală” din layout */
+  --logo-scale: 3.2;    /* >>> mai mare: 2.6–3.6 după gust */
+}
