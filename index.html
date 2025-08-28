@@ -89,7 +89,7 @@
           <figure class="thumb"><img src="images/achizitii.webp" alt="Achiziție paleți EURO"></figure>
           <div class="body">
             <h3>Achiziție</h3>
-            <p><strong>Achiziție Paleți EURO</strong><br>Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.</p>
+            <p>Transformăm paleții EURO neutilizați în profit rapid.<p>
             <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
@@ -109,7 +109,7 @@
           <figure class="thumb"><img src="images/comercializare.webp" alt="Vânzare paleți EURO SH"></figure>
           <div class="body">
             <h3>Vânzare</h3>
-            <p><strong>Comercializare EURO SH — Experiență vastă</strong><br>Fie că doriți să achiziționați paleți de calitate superioară sau să valorificați surplusul de paleți, la ePalet găsiți soluția potrivită. <strong>Vânzare Paleți EURO Second-Hand</strong> — Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în Clasa A (calitate superioară) și Clasa B (standard). Astfel, puteți alege cu încredere produsul potrivit.</p>
+            <p>Paleți EURO SH disponibili imediat, clasați A și B.</p>
             <span class="hint-more">Află mai multe ▼</span>
           </div>
         </article>
@@ -194,70 +194,112 @@
     </div>
     <div class="legal">© <span id="year">2025</span> ePalet. Toate drepturile rezervate.</div>
   </footer>
+<!-- ===== JS ===== -->
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
 
-  <!-- ===== JS ===== -->
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+  // slider
+  const slides = document.querySelectorAll('.slide');
+  let idx=0;
+  function show(i){ slides.forEach((s,k)=>s.classList.toggle('active',k===i)); }
+  function next(){ idx=(idx+1)%slides.length; show(idx); }
+  document.getElementById('prev').onclick=()=>{idx=(idx-1+slides.length)%slides.length;show(idx);}
+  document.getElementById('next').onclick=next;
+  setInterval(next,4000);
 
-    // slider
-    const slides = document.querySelectorAll('.slide');
-    let idx=0;
-    function show(i){ slides.forEach((s,k)=>s.classList.toggle('active',k===i)); }
-    function next(){ idx=(idx+1)%slides.length; show(idx); }
-    document.getElementById('prev').onclick=()=>{idx=(idx-1+slides.length)%slides.length;show(idx);}
-    document.getElementById('next').onclick=next;
-    setInterval(next,4000);
+  // popout servicii
+  const DATA={
+    'Achiziție':{
+      img:'images/comercializare.webp',
+      title:'Achiziție Paleți EURO',
+      text:'Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.'
+    },
 
-    // popout servicii
-    const DATA={
-      'Achiziție':{
-        img:'images/comercializare.webp',
-        title:'Achiziție Paleți EURO',
-        text:'Aveți paleți EURO pe care nu îi mai utilizați? Îi transformăm în profit pentru dumneavoastră! Suntem în permanență interesați de achiziția paleților EURO, oferind o evaluare corectă și plata rapidă. Contactați-ne pentru a stabili o ofertă și a programa ridicarea paleților direct de la locația dumneavoastră, simplu și eficient.'
-      },
+    'Reparații':{
+      img:'images/popreparatii.webp',
+      title:'Pionieri în România: Reparații Paleți EURO cu Certificare PEFC Reciclat',
+      text:'Fiind certificată <strong>PEFC Reciclat</strong> pentru reparația paleților, compania noastră vă oferă un avantaj competitiv unic. Vă garantăm nu doar reparații executate la cele mai înalte standarde, sub licență oficială <strong>UIC-EUR</strong>, ci și soluția definitivă pentru conformitatea afacerii dumneavoastră. Echipa noastră de specialiști, folosind echipamente de ultimă generație, asigură calitatea și siguranța fiecărui palet recondiționat.<br><br>Beneficiul direct și crucial este <strong>exonerarea completă de la obligațiile complexe ale Regulamentului European privind Defrișările (EUDR)</strong>, asigurată prin certificarea noastră. Astfel, eliminați riscurile birocratice și vă asigurați un lanț logistic fluid pentru paleții dumneavoastră, a cărui calitate este susținută și de certificările <strong>ISO 9001:2015</strong> și <strong>ISO 14001:2015</strong>.'
+    },
 
-      'Reparații':{
-        img:'images/popreparatii.webp',
-        title:'Pionieri în România: Reparații Paleți EURO cu Certificare PEFC Reciclat',
-        text:'Fiind certificată <strong>PEFC Reciclat</strong> pentru reparația paleților, compania noastră vă oferă un avantaj competitiv unic. Vă garantăm nu doar reparații executate la cele mai înalte standarde, sub licență oficială <strong>UIC-EUR</strong>, ci și soluția definitivă pentru conformitatea afacerii dumneavoastră. Echipa noastră de specialiști, folosind echipamente de ultimă generație, asigură calitatea și siguranța fiecărui palet recondiționat.<br><br>Beneficiul direct și crucial este <strong>exonerarea completă de la obligațiile complexe ale Regulamentului European privind Defrișările (EUDR)</strong>, asigurată prin certificarea noastră. Astfel, eliminați riscurile birocratice și vă asigurați un lanț logistic fluid pentru paleții dumneavoastră, a cărui calitate este susținută și de certificările <strong>ISO 9001:2015</strong> și <strong>ISO 14001:2015</strong>.'
-      },
+    'Comercializare & Vânzare':{
+      img:'images/popcomercializare.webp',
+      title:'Comercializare EURO SH — Experiență vastă',
+      text:'Dacă doriți să achiziționați paleți de calitate superioară, la <strong>ePalet</strong> găsiți soluția potrivită.<br><br><strong>Vânzare Paleți EURO Second-Hand</strong><br><br>Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în <strong>Clasa&nbsp;A</strong> (calitate superioară) și <strong>Clasa&nbsp;B</strong> (standard). Astfel, puteți alege cu încredere produsul care se potrivește perfect cerințelor dumneavoastră logistice și bugetare, având garanția unui palet funcțional și sigur.'
+    }
+  }; // <-- închidem corect obiectul DATA
 
-'Comercializare & Vânzare':{
-  img:'images/popcomercializare.webp',
-  title:'Comercializare EURO SH — Experiență vastă',
-  text:'Dacă doriți să achiziționați paleți de calitate superioară, la <strong>ePalet</strong> găsiți soluția potrivită.<br><br><strong>Vânzare Paleți EURO Second-Hand</strong><br><br>Oferim o gamă largă de paleți EURO SH, disponibili imediat din stoc și pregătiți pentru utilizare. Fiecare palet este supus unui proces riguros de inspecție și sortare, fiind clasificat calitativ în <strong>Clasa&nbsp;A</strong> (calitate superioară) și <strong>Clasa&nbsp;B</strong> (standard). Astfel, puteți alege cu încredere produsul care se potrivește perfect cerințelor dumneavoastră logistice și bugetare, având garanția unui palet funcțional și sigur.'
-}
+  const grid=document.querySelector('.service-grid');
+  const pop=document.getElementById('service-popout');
+  let openKey=null;
+
+  function render(key){
+    const d=DATA[key]; if(!d){pop.innerHTML='';pop.classList.remove('open');openKey=null;return;}
+    pop.innerHTML=`
+      <div class="backdrop" style="background-image:url('${d.img}')">
+        <div class="shade"></div>
+        <div class="inner">
+          <h3>${d.title}</h3>
+          <p>${d.text}</p>
+          <div class="actions"><a class="btn small" href="contact.html">Cere ofertă</a></div>
+        </div>
+        <button class="close">✕</button>
+      </div>`;
+
+    pop.classList.add('open');
+
+    // close btn: la închidere curățăm eventualele stiluri inline puse pe desktop
+    const closeBtn = pop.querySelector('.close');
+    if (closeBtn){
+      closeBtn.onclick = () => {
+        pop.classList.remove('open'); openKey=null;
+        pop.style.maxHeight = ''; pop.style.overflow = '';
+        const inner = pop.querySelector('.inner');
+        if(inner){ inner.style.maxHeight=''; inner.style.overflow=''; }
+      };
+    }
+  }
+
+  // CLICK pe card – desktop: popout full; mobil/tabletă: ca înainte (scroll intern)
+  grid.addEventListener('click', e => {
+    const card=e.target.closest('.service-card'); if(!card) return;
+    const key=card.dataset.key;
+
+    if(openKey===key){ pop.classList.remove('open'); openKey=null; return; }
+
+    openKey=key; render(key);
+
+    const isMobile = window.matchMedia('(max-width: 1024px)').matches;
+
+    if (isMobile) {
+      // pe mobil: comportament existent (scroll la secțiune)
+      pop.scrollIntoView({behavior:'smooth', block:'start'});
+    } else {
+      // pe desktop: scoatem limitările de înălțime/overflow ca să se vadă TOT
+      pop.style.maxHeight = 'none';
+      pop.style.overflow = 'visible';
+      requestAnimationFrame(() => {
+        const inner = pop.querySelector('.inner');
+        if(inner){
+          inner.style.maxHeight = 'none';
+          inner.style.overflow = 'visible';
+        }
+        // aliniem frumos deasupra popout-ului
+        const y = pop.getBoundingClientRect().top + window.scrollY - 12;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+      });
     }
 
-    const grid=document.querySelector('.service-grid');
-    const pop=document.getElementById('service-popout');
-    let openKey=null;
-    function render(key){
-      const d=DATA[key]; if(!d){pop.innerHTML='';pop.classList.remove('open');openKey=null;return;}
-      pop.innerHTML=`
-        <div class="backdrop" style="background-image:url('${d.img}')">
-          <div class="shade"></div>
-          <div class="inner">
-            <h3>${d.title}</h3>
-            <p>${d.text}</p>
-            <div class="actions"><a class="btn small" href="contact.html">Cere ofertă</a></div>
-          </div>
-          <button class="close">✕</button>
-        </div>`;
-      pop.classList.add('open');
-      pop.querySelector('.close').onclick=()=>{pop.classList.remove('open');openKey=null;};
-    }
-    grid.addEventListener('click',e=>{
-      const card=e.target.closest('.service-card'); if(!card) return;
-      const key=card.dataset.key;
-      if(openKey===key){pop.classList.remove('open');openKey=null;return;}
-      openKey=key; render(key);
-      pop.scrollIntoView({behavior:'smooth'});
+    // 🔽 ADĂUGAT: scroll lin „de siguranță” după randare, pentru toate device-urile
+    requestAnimationFrame(() => {
+      pop.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
-  </script>
+  });
+</script>
 
-  <!-- PDF.js pentru randare PDF -->
-  <script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
-  <script defer src="certificates.js"></script>
+<!-- PDF.js pentru randare PDF -->
+<script src="https://unpkg.com/pdfjs-dist@3.11.174/build/pdf.min.js"></script>
+<script defer src="certificates.js"></script>
+
 </body>
 </html>
+

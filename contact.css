@@ -234,3 +234,10 @@ img{ display:block; max-width:100%; height:auto }
 .dept-list a{ text-decoration:none; }
 .dept-list .wa{ display:inline-grid; place-items:center; margin-left:.4rem; width:26px; height:26px; border-radius:6px; background:#25D3661a; border:1px solid #25D36655; vertical-align:middle; }
 .wa-icon{ width:15px; height:15px; fill:#25D366; }
+/* Social icons în footer pe mobil - centrate sub adresă */
+@media (max-width: 768px){
+  .social{
+    justify-content: center;   /* centrează pe orizontală */
+    margin-top: 8px;           /* spațiu mic deasupra */
+  }
+}

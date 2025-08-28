@@ -120,8 +120,23 @@ a{ color:inherit; text-decoration:none }
 }
 .svc-card h2{ font-size:1.3rem; margin-bottom:.5rem; color:#fff }
 .svc-card p{ color:#eef3f6; margin-bottom:.6rem; line-height:1.6 }
-.svc-card ul{ padding-left:1.1rem; color:#eef3f6; font-size:.95rem }
-.svc-card ul li{ margin:.25rem 0; list-style:disc inside }
+
+/* ✅ FIX LISTE: textul continuă aliniat cu primul rând (nu sub bullet) */
+.svc-card ul{
+  list-style-type: disc;
+  list-style-position: outside;    /* marker în afara blocului -> aliniere corectă */
+  padding-left: 1.4rem;            /* spațiu pentru marker */
+  margin:.6rem 0 0;
+}
+.svc-card ul li{
+  margin:.25rem 0;
+  /* fără text-indent negativ, fără inside */
+  line-height:1.55;
+  /* pentru siguranță pe browsere mai vechi */
+  display:list-item;
+}
+
+/* efect hover */
 .svc-card:hover{ transform:translateY(-6px); box-shadow:0 16px 36px rgba(0,0,0,.25) }
 .svc-card:hover .overlay{ background: linear-gradient(180deg, rgba(0,0,0,.45), rgba(0,0,0,.8)) }
 
@@ -149,9 +164,9 @@ a{ color:inherit; text-decoration:none }
   .subhero{ min-height:360px }
 
   .svc-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .svc-card{ grid-column: auto / span 1; }               /* IMPORTANT: anulăm span 2 */
+  .svc-card{ grid-column: auto / span 1; }
   .svc-card:nth-child(4),
-  .svc-card:nth-child(5){ grid-column:auto / span 1; }   /* și poziționările speciale */
+  .svc-card:nth-child(5){ grid-column:auto / span 1; }
 }
 
 /* Telefon / phablet (≤768px): 1 coloană */
@@ -159,7 +174,7 @@ a{ color:inherit; text-decoration:none }
   .subhero{ min-height:320px }
   .section{ padding: 48px 0 }
   .svc-grid{ grid-template-columns: 1fr; gap:22px }
-  .svc-card{ min-height:240px; grid-column:auto / span 1; }  /* FORȚĂM 1 coloană */
+  .svc-card{ min-height:240px; grid-column:auto / span 1; }
   .svc-card h2{ font-size:1.2rem }
   .svc-card p, .svc-card ul{ font-size:.98rem }
 }
@@ -172,21 +187,16 @@ a{ color:inherit; text-decoration:none }
   .svc-card h2{ font-size:1.1rem }
   .svc-card p, .svc-card ul{ font-size:.95rem }
 }
-/* ===== Footer – media queries corecte (identic ca pe celelalte pagini) ===== */
 
-/* setăm ariile ca să putem rearanja ușor pe breakpoints */
-.footer-grid{
-  grid-template-areas: "brand dept contact";
-}
+/* ===== Footer – media queries corecte (identic ca pe celelalte pagini) ===== */
+.footer-grid{ grid-template-areas: "brand dept contact"; }
 .foot-brand   { grid-area: brand; }
 .foot-dept    { grid-area: dept; }
 .foot-contact { grid-area: contact; }
 
-/* Tabletă / laptop mic (≤1024px): 2 coloane, brand pe un rând întreg sus */
 @media (max-width: 1024px){
-  :root{ --footer-logo: 60px; }           /* logo ușor mai mic în footer */
+  :root{ --footer-logo: 60px; }
   .site-footer{ margin-top: 48px; }
-
   .footer-grid{
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
@@ -196,10 +206,8 @@ a{ color:inherit; text-decoration:none }
   }
 }
 
-/* Telefon & tabletă portret (≤768px): 1 coloană, totul centrat */
 @media (max-width: 768px){
   :root{ --footer-logo: 56px; }
-
   .footer-grid{
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -209,23 +217,18 @@ a{ color:inherit; text-decoration:none }
     gap: 16px;
     text-align: center;
   }
-
   .foot-brand img{ margin: 0 auto .5rem; }
   .foot-dept ul{
-    justify-items: center;   /* aliniază frumos listele */
-    text-align: left;        /* punctele listei rămân la stânga, dar centrăm blocul */
-    width: max-content;
-    margin: 0 auto;
+    justify-items: center; text-align: left; width: max-content; margin: 0 auto;
   }
   .foot-contact .btn.small{ margin-top: .4rem; }
 }
 
-/* Telefoane foarte mici (≤400px): padding mai strâns și text mic la copyright */
 @media (max-width: 400px){
   .footer-grid{ padding: 20px 0; }
   .legal{ font-size: .95rem; }
 }
-/* centrare linie drepturi & an ===== */
+/* centrare linie drepturi & an */
 .site-footer .legal{
   width: 100%;
   display: flex;
@@ -238,24 +241,18 @@ a{ color:inherit; text-decoration:none }
   margin: 0 auto;
 }
 
-/* opțional: font puțin mai mic pe mobil */
 @media (max-width: 480px){
   .site-footer .legal{ font-size: .95rem; }
 }
+
 /* === LOGO ȘI MAI MARE, FĂRĂ SĂ CREASCĂ HEADERUL === */
 :root{
-  --header-h: 70px;     /* bara rămâne subțire */
-  --logo-base-h: 60px;  /* mărimea “reală” din layout */
-  --logo-scale: 3.2;    /* >>> mai mare: 2.6–3.6 după gust */
+  --header-h: 70px;
+  --logo-base-h: 60px;
+  --logo-scale: 3.2;
 }
-
-/* nu mărim bara; permitem logo-ului să „iasă” peste ea dacă e nevoie */
 .site-header{ height: var(--header-h) !important; overflow: visible; }
-
-/* puțin spațiu între logo și meniu, ca pe celelalte pagini */
 .container.hdr{ gap: clamp(28px, 8vw, 220px) !important; }
-
-/* logo mare, fără să forțăm width/height fixe */
 .logo img{
   height: var(--logo-base-h) !important;
   width: auto !important;
@@ -263,27 +260,30 @@ a{ color:inherit; text-decoration:none }
   transform-origin: left center;
   display: block;
 }
-
-/* desktop mare: un strop mai mare, ca pe celelalte pagini */
 @media (min-width: 1280px){
   :root{ --logo-scale: 3.6; }
 }
-
-
 @media (max-width: 480px){
   :root{
-    --logo-scale: 3;     /* header logo */
+    --logo-scale: 3;
     --logo-base-h: 44px;
-    --footer-logo: 90px;   /* footer logo */
+    --footer-logo: 90px;
   }
 }
+
 /* Footer: social + WhatsApp */
 .social{ list-style:none; display:flex; gap:10px; margin:10px 0 0; padding:0; }
 .icon-btn{ display:inline-grid; place-items:center; width:36px; height:36px; border:1px solid var(--line); border-radius:10px; background:#fff; }
 .icon{ width:18px; height:18px; fill:#0f1820; opacity:.85 }
 .icon-btn:hover .icon{ opacity:1 }
-
 .dept-list{ list-style:none; padding:0; margin:0; display:grid; gap:.35rem; }
 .dept-list a{ text-decoration:none; }
 .dept-list .wa{ display:inline-grid; place-items:center; margin-left:.4rem; width:26px; height:26px; border-radius:6px; background:#25D3661a; border:1px solid #25D36655; vertical-align:middle; }
 .wa-icon{ width:15px; height:15px; fill:#25D366; }
+/* Social icons în footer pe mobil - centrate sub adresă */
+@media (max-width: 768px){
+  .social{
+    justify-content: center;   /* centrează pe orizontală */
+    margin-top: 8px;           /* spațiu mic deasupra */
+  }
+}
