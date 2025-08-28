@@ -211,3 +211,10 @@ img{ display:block; max-width:100%; height:auto }
 @media (max-width: 480px){
   .site-footer .legal{ font-size: .95rem; }
 }
+@media (max-width: 480px){
+  :root{
+    --logo-scale: 3;     /* header logo */
+    --logo-base-h: 44px;
+    --footer-logo: 90px;   /* footer logo */
+  }
+}

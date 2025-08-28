@@ -269,7 +269,11 @@ a{ color:inherit; text-decoration:none }
   :root{ --logo-scale: 3.6; }
 }
 
-/* pe mobil: ușor mai mic, să nu atingă burgerul */
+
 @media (max-width: 480px){
-  :root{ --logo-scale: 1.8; --logo-base-h: 40px; }
+  :root{
+    --logo-scale: 3;     /* header logo */
+    --logo-base-h: 44px;
+    --footer-logo: 90px;   /* footer logo */
+  }
 }

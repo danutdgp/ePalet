@@ -507,3 +507,28 @@ a{ color:inherit; text-decoration:none }
 /* Fix colț alb: ascundem canvasul pentru pagina următoare până la flip */
 .page-canvas#pageNext{ opacity:0; pointer-events:none; }
 .flip-forward #pageNext, .flip-back #pageNext{ opacity:1; }
+/* LOGO mai mare pe telefoane */
+@media (max-width: 480px){
+  :root{
+    --logo-scale: 3;     /* header logo */
+    --logo-base-h: 44px;
+    --footer-logo: 90px;   /* footer logo */
+  }
+}
+/* Tap sigur pe carduri pe mobil (evenimentele nu se "pierd" pe img/span) */
+.service-card .thumb,
+.service-card .thumb img,
+.service-card .hint-more{
+  pointer-events: none;
+}
+
+/* UX mic: elimină highlight-ul albastru la tap & selectarea accidentală */
+.service-card{
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+/* Când derulez la popout, ține cont de header-ul fix */
+#service-popout{
+  scroll-margin-top: calc(var(--header-h) + 12px);
+}
