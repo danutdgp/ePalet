@@ -63,7 +63,7 @@ a{ color:inherit; text-decoration:none }
 .section-title.pop-in{ animation: pop .6s ease both }
 @keyframes pop{ from{opacity:0; transform:translateX(-50%) scale(.96)} to{opacity:1; transform:translateX(-50%) scale(1)} }
 
-/* ===== HEADER (logo stânga, pagini dreapta) ===== */
+/* ===== HEADER (stânga, pagini dreapta) ===== */
 .site-header{
   position: fixed; top:0; left:0; right:0;
   height: var(--header-h);
@@ -239,8 +239,8 @@ a{ color:inherit; text-decoration:none }
 }
 /* === LOGO ȘI MAI MARE, FĂRĂ SĂ CREASCĂ HEADERUL === */
 :root{
-  --header-h: 72px;     /* bara rămâne subțire */
-  --logo-base-h: 44px;  /* mărimea “reală” din layout */
+  --header-h: 70px;     /* bara rămâne subțire */
+  --logo-base-h: 60px;  /* mărimea “reală” din layout */
   --logo-scale: 3.2;    /* >>> mai mare: 2.6–3.6 după gust */
 }
 
